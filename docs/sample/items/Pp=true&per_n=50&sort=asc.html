@@ -1,0 +1,682 @@
+
+<!doctype html>
+<html lang="ja" data-bs-theme="auto">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    
+    <meta chaset="utf-8" />
+    <meta http-equiv="content-language" content="ja">
+    <meta http-equiv="X-UA-Compatible" context="IE=edge" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <meta name="viewport" context="width=device-with, initial-scale=1, shrink-to-fit=no" />
+    <script type="text/javascript">
+        document.querySelector("[name=viewport]").setAttribute("content", "width=device-width, initial-scale=1, user-scalable=no");
+    </script>
+    
+    <title>Django myapp</title>
+    <meta name="description" content="" />
+    <meta name="keywords"    content="" />
+    
+    <meta property="og:title"        content="Django myapp" />
+    <meta property="og:type"         content="website" />
+    <meta property="og:url"          content="http://127.0.0.1:8000" />
+    
+    <meta property="og:description"  content="" />
+    <meta property="og:locale"       content="ja_JP" />
+    <meta name="twitter:card"        content="summary" />
+    <meta name="twitter:site"        content="@mitsuhiro-k" />
+    <meta name="twitter:creator"     content="@mitsuhiro-k" />
+    <meta name="twitter:title"       content="Django myapp" />
+    <meta name="twitter:description" content="" />
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto%20Sans%20JP:wght@200;300;400;500;600;700;800&display=swap">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../../static/templates/base/base.css" />
+    <link rel="stylesheet" href="../../static/templates/base/print.css" />
+    
+    <link rel="stylesheet" href="../../static/templates/common/css/bs-color/bs-color.css" />
+    
+    <link rel="stylesheet" href="../../static/templates/common/css/font-utils/font-utils.css" />
+    
+    <link rel="stylesheet" href="../../static/templates/common/css/layout-utils/layout-utils.css" />
+    
+    
+    
+    <link rel="stylesheet" href="../../static/templates/common/func/navbar/navbar.css" />
+    
+    <link rel="stylesheet" href="../../static/templates/common/func/Back2Top/Back2Top.css" />
+    
+
+<link rel="stylesheet" href="../../static/templates/common/css/form-utils/form-utils.css" />
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="../../static/templates/common/func/bs-color-modes/bs-color-modes.js"></script>
+    
+    <script src="../../static/templates/common/func/navbar/navbar.js"></script>
+    
+
+<script src="../../static/templates/common/func/on-click-disable/button.js"></script>
+
+    
+    
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7F2F7" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#322F38" />
+    
+    
+    
+    
+    
+    <meta name="author" content="K.Mitsuhiro" />
+    
+    
+</head>
+<body >
+    
+    
+        
+<div class="fixed-top" id="Navbar">
+    <nav class="navbar navbar-expand-md" id="NavbarItem">
+        <div class="container-fluid">
+            <a class="btn navbar-brand"
+               role="button"
+               href="../../index.html">
+               Django myapp
+            </a>
+            <button class="btn navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#NavbarNav"
+                    aria-controls="NavbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    id="TogglerNavigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse"
+                id="NavbarNav">
+                <div class="navbar-nav">
+                    <a class="btn nav-link"
+                       role="button"
+                       href="../page/index.html">
+                       <i class="beginning-sentence-icon fa-regular fa-newspaper"></i>Page
+                    </a>
+                    <a class="btn nav-link"
+                       role="button"
+                       href="../form/index.html">
+                       <i class="beginning-sentence-icon fa-regular fa-pen-to-square"></i>Form
+                    </a>
+                    <a class="btn nav-link"
+                       role="button"
+                       href="../summernote/create/index.html">
+                       <i class="beginning-sentence-icon fa-solid fa-wand-magic-sparkles"></i>Summernote Form
+                    </a>
+                    <a class="btn nav-link"
+                       role="button"
+                       href="./index.html">
+                       <i class="beginning-sentence-icon fa-solid fa-magnifying-glass"></i>Items View
+                    </a>
+                    <a class="btn nav-link"
+                       role="button"
+                       href="../graph/index.html">
+                       <i class="beginning-sentence-icon fa-solid fa-square-poll-vertical"></i>Graph View
+                    </a>
+                    
+                    <div class="d-md-none text-center">
+                        <div class="border-top"></div>
+                        
+                        <a class="btn nav-link"
+                           role="button"
+                           href="../../accounts/signup/index.html">
+                            <i class="beginning-sentence-icon fas fa-user-plus"></i>Sign up
+                        </a>
+                        <a class="btn nav-link"
+                           role="button"
+                           href="../../accounts/login/index.html">
+                            <i class="beginning-sentence-icon fas fa-sign-in-alt"></i>Log in
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-none d-md-block">
+                <div class="btn-group" id="NavberDropdown">
+                    <button class="btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        
+                        <img src="../../static/apps/user_profile/user_icon/default/default.svg"
+                             class="rounded-circle border border-1 dropdown_botton_img"
+                             alt="user_icon" />
+                        
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                    
+                        <div class="p-2 text-center">
+                        
+                            <a class="btn dropdown-item"
+                               role="button"
+                               href="../../accounts/login/index.html">
+                                <i class="beginning-sentence-icon fas fa-sign-in-alt"></i>Log in
+                            </a>
+                            <a class="btn dropdown-item"
+                               role="button"
+                               href="../../accounts/signup/index.html">
+                                <i class="beginning-sentence-icon fas fa-user-plus"></i>Sign up
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+</div>
+    
+    
+    <div id="HeroArea"></div>
+    
+    <div></div>
+    
+    <div class="container min-vh-100">
+        
+        
+
+
+
+
+        
+        
+<div class="sub-container-3">
+    
+<div class="row mx-auto">
+    <div class="col-lg-10 col-md-12 mx-auto">
+        <div class="d-flex flex-nowrap justify-content-between pb-3">
+            <div class="text-left flex-grow-1">
+                <h1 class="f-content-title">pagenation and QuerySetSearch 動作確認用ページ</h1>
+            </div>
+            <div class="text-right mt-4">
+                <button class="btn btn-primary on-click-disable"
+                        onclick="location.href='/sample/items/import_dataset/'">
+                    DataImport
+                </button>
+            </div>
+        </div>
+        
+        
+            
+<div class="d-flex justify-content-between align-items-center mt-4 pb-2" id="PagenationNav">
+
+    
+    <div class="flex-grow-1">
+        <form class="search-input-form w-50" action="http://127.0.0.1:8000/sample/items/" method="GET">
+            <input type="text"
+                   class=""
+                   name="q"
+                   
+                        placeholder=""
+                    />
+        </form>
+    </div>
+
+    
+    <div class="btn-group">
+        <button type="button"
+                class="btn btn-sm dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+            
+                <i class="beginning-sentence-icon fa-solid fa-arrow-down-1-9"></i>昇順
+            
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="./Pp=true&per_n=50&sort=asc.html" role="button" class="dropdown-item">昇順</a></li>
+            <li><a href="./Pp=true&per_n=50&sort=desc.html" role="button" class="dropdown-item">降順</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="btn-group">
+        <button type="button"
+                class="btn btn-sm dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+            <i class="beginning-sentence-icon fa-solid fa-list-ol"></i>表示件数: 50
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="./Pp=true&per_n=10&sort=asc.html" role="button" class="dropdown-item">10</a></li>
+            <li><a href="./Pp=true&per_n=20&sort=asc.html" role="button" class="dropdown-item">20</a></li>
+            <li><a href="./Pp=true&per_n=50&sort=asc.html" role="button" class="dropdown-item">50</a></li>
+            <li><a href="./Pp=true&per_n=100&sort=asc.html" role="button" class="dropdown-item">100</a></li>
+        </ul>
+    </div>
+</div>
+        
+        <div class="card">
+            <div class="list-group">
+                <div id="ItemList">
+                    
+                    <a href="./detail/1/index.html"
+                       class="list-group-item list-group-item-action border p-2">
+                        進撃の巨人(pk:1)
+                    </a>
+                    
+                    <a href="./detail/2/index.html"
+                       class="list-group-item list-group-item-action border p-2">
+                        デスノート(pk:2)
+                    </a>
+                    
+                    <a href="./detail/3/index.html"
+                       class="list-group-item list-group-item-action border p-2">
+                        鋼の錬金術師 FULLMETAL ALCHEMIST(pk:3)
+                    </a>
+                    
+                    <a href="./detail/4/index.html"
+                       class="list-group-item list-group-item-action border p-2">
+                        ワンパンマン(pk:4)
+                    </a>
+                    
+                    <a href="./detail/5/index.html"
+                       class="list-group-item list-group-item-action border p-2">
+                        ソードアート・オンライン(pk:5)
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+            
+<script type="text/javascript">
+    var isAjaxProcessing = false;
+    function ajax_pagenate_fnc(request_page, per_n, sort, q) {
+        const scroll_time  = 0;
+        // Ajax 処理中の場合にはさらなる要求は受け付けない
+        if( isAjaxProcessing ) {
+            console.log('Ajax: Request rejected because it is being processed');
+            return;
+        };
+        isAjaxProcessing = true;
+        // Ajax
+        $.ajax({
+            url:      '/sample/items/ajax/pagenate',
+            type:     'GET',
+            dataType: 'json',
+            data: {
+                'request_page': request_page,
+                'per_n':        per_n,
+                'sort':         sort,
+                'q':            q,
+            },
+        // Ajax 通信成功処理
+        }).done( function (data) {
+            let objs_data     = JSON.parse(data.objs_data),
+                nav_list      = data.nav_list,
+                nav_page_dict = data.nav_page_dict;
+            // ListArea
+            $('#ItemList').empty();
+            $.each(objs_data, function(i, obj) {
+                $('#ItemList').append(
+                    '<a class="list-group-item list-group-item-action border p-2" href="http://127.0.0.1:8000/sample/items/'%20%20%20obj['url']%20%20%20'">\
+                        ' + obj['Japanese'] + '(pk:' + obj['pk'] + ')\
+                    </a>'
+                );
+            });
+            // PageNav
+            $('#PagenationNavItems').empty();
+            $('#PagenationNavItems').append(
+                '<li class="page-item">\
+                    <button type="button" class="page-link" onclick="ajax_pagenate_fnc(' + nav_page_dict.previous_page + ',' + per_n + ',\'' + sort + '\',\'' + q + '\')">\
+                        <i class="fa-solid fa-chevron-left"></i>\
+                    </button>\
+                </li>'
+            );
+            $.each(nav_list, function(i, page) {
+                if ( page == '…' ) {
+                    $('#PagenationNavItems').append(
+                        '<li class="page-item disabled">\
+                            <span class="page-link">' + page + '</span>\
+                        </li>'
+                    );
+                } else if ( page == request_page ) {
+                    $('#PagenationNavItems').append(
+                        '<li class="page-item active">\
+                            <button type="button" class="page-link" onclick="ajax_pagenate_fnc(' + page + ',' + per_n + ',\'' + sort + '\',\'' + q + '\')">\
+                                ' + page + '\
+                            </button>\
+                        </li>'
+                    );
+                } else {
+                    $('#PagenationNavItems').append(
+                        '<li class="page-item">\
+                            <button type="button" class="page-link" onclick="ajax_pagenate_fnc(' + page + ',' + per_n + ',\'' + sort + '\',\'' + q + '\')">\
+                                ' + page + '\
+                            </button>\
+                        </li>'
+                    );
+                };
+            });
+            $('#PagenationNavItems').append(
+                '<li class="page-item">\
+                    <button type="button" class="page-link" onclick="ajax_pagenate_fnc(' + nav_page_dict.next_page + ',' + per_n + ',\'' + sort + '\',\'' + q + '\')">\
+                        <i class="fa-solid fa-chevron-right"></i>\
+                    </button>\
+                </li>'
+            );
+        // Ajax 通信エラー処理
+        }).fail( function () {
+            $('#ItemList').empty();
+            $('#ItemList').append('<span>error...</span>');
+        // Ajax 通信終了時処理(エラーでも実行)
+        }).always(function() {
+            isAjaxProcessing = false;
+        });
+        $("body,html").animate({
+            scrollTop: 0,
+        }, scroll_time, 'easeInOutCubic');
+        return false;
+    }
+</script>
+        
+        
+        
+            
+<div class="d-flex align-items-center mt-4" id="PagenationNav">
+    
+    <ul class="pagination" id="PagenationNavItems">
+        <li class="page-item">
+            <button type="button"
+                    class="page-link"
+                    onclick="ajax_pagenate_fnc(1,50,'asc','')">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+        </li>
+        
+            <li class="page-item active">
+                <button type="button"
+                        class="page-link"
+                        onclick="ajax_pagenate_fnc(1,50,'asc','')">
+                    1
+                </button>
+            </li>
+        
+        <li class="page-item">
+            <button type="button"
+                    class="page-link"
+                    onclick="ajax_pagenate_fnc(1,50,'asc','')">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </li>
+    </ul>
+    
+    <div class="btn-group">
+        <button type="button"
+                class="btn btn-sm dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+            <i class="fa-solid fa-person-running"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            
+            <li>
+                <button type="button"
+                        class="dropdown-item"
+                        onclick="ajax_pagenate_fnc(1,50,'asc','')">
+                    1
+                </button>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+        
+    </div>
+</div>
+
+</div>
+
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
+    <script src="../../static/templates/common/func/Back2Top/Back2Top.js"></script>
+    
+    
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="auto-color-mode" viewBox="0 0 512 512">
+      <path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>
+    </symbol>
+    <symbol id="light-color-mode" viewBox="0 0 512 512">
+      <path d="M375.7 19.7c-1.5-8-6.9-14.7-14.4-17.8s-16.1-2.2-22.8 2.4L256 61.1 173.5 4.2c-6.7-4.6-15.3-5.5-22.8-2.4s-12.9 9.8-14.4 17.8l-18.1 98.5L19.7 136.3c-8 1.5-14.7 6.9-17.8 14.4s-2.2 16.1 2.4 22.8L61.1 256 4.2 338.5c-4.6 6.7-5.5 15.3-2.4 22.8s9.8 13 17.8 14.4l98.5 18.1 18.1 98.5c1.5 8 6.9 14.7 14.4 17.8s16.1 2.2 22.8-2.4L256 450.9l82.5 56.9c6.7 4.6 15.3 5.5 22.8 2.4s12.9-9.8 14.4-17.8l18.1-98.5 98.5-18.1c8-1.5 14.7-6.9 17.8-14.4s2.2-16.1-2.4-22.8L450.9 256l56.9-82.5c4.6-6.7 5.5-15.3 2.4-22.8s-9.8-12.9-17.8-14.4l-98.5-18.1L375.7 19.7zM269.6 110l65.6-45.2 14.4 78.3c1.8 9.8 9.5 17.5 19.3 19.3l78.3 14.4L402 242.4c-5.7 8.2-5.7 19 0 27.2l45.2 65.6-78.3 14.4c-9.8 1.8-17.5 9.5-19.3 19.3l-14.4 78.3L269.6 402c-8.2-5.7-19-5.7-27.2 0l-65.6 45.2-14.4-78.3c-1.8-9.8-9.5-17.5-19.3-19.3L64.8 335.2 110 269.6c5.7-8.2 5.7-19 0-27.2L64.8 176.8l78.3-14.4c9.8-1.8 17.5-9.5 19.3-19.3l14.4-78.3L242.4 110c8.2 5.7 19 5.7 27.2 0zM256 368a112 112 0 1 0 0-224 112 112 0 1 0 0 224zM192 256a64 64 0 1 1 128 0 64 64 0 1 1 -128 0z"/>
+    </symbol>
+    <symbol id="dark-color-mode" viewBox="0 0 384 512">
+      <path d="M144.7 98.7c-21 34.1-33.1 74.3-33.1 117.3c0 98 62.8 181.4 150.4 211.7c-12.4 2.8-25.3 4.3-38.6 4.3C126.6 432 48 353.3 48 256c0-68.9 39.4-128.4 96.8-157.3zm62.1-66C91.1 41.2 0 137.9 0 256C0 379.7 100 480 223.5 480c47.8 0 92-15 128.4-40.6c1.9-1.3 3.7-2.7 5.5-4c4.8-3.6 9.4-7.4 13.9-11.4c2.7-2.4 5.3-4.8 7.9-7.3c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-3.7 .6-7.4 1.2-11.1 1.6c-5 .5-10.1 .9-15.3 1c-1.2 0-2.5 0-3.7 0c-.1 0-.2 0-.3 0c-96.8-.2-175.2-78.9-175.2-176c0-54.8 24.9-103.7 64.1-136c1-.9 2.1-1.7 3.2-2.6c4-3.2 8.2-6.2 12.5-9c3.1-2 6.3-4 9.6-5.8c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-3.6-.3-7.1-.5-10.7-.6c-2.7-.1-5.5-.1-8.2-.1c-3.3 0-6.5 .1-9.8 .2c-2.3 .1-4.6 .2-6.9 .4z"/>
+    </symbol>
+</svg>
+<div class="dropdown dropup position-fixed bottom-0 start-0 ps-1 pb-1 bd-mode-toggle">
+  <button class="btn btn-bd-primary dropdown-toggle d-flex align-items-center"
+          id="bd-theme"
+          type="button"
+          aria-expanded="false"
+          data-bs-toggle="dropdown"
+          aria-label="テーマの切替（ダーク）">
+    <svg class="bi theme-icon-active" width="1rem" height="1rem"><use href="#auto-color-mode"></use></svg>
+    <span class="visually-hidden" id="bd-theme-text">カラーモードの切替</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end shadow"
+      aria-labelledby="bd-theme-text">
+    <li>
+      <button type="button"
+              class="dropdown-item d-flex align-items-center"
+              data-bs-theme-value="light"
+              aria-pressed="false">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#light-color-mode"></use></svg>
+        ライト
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="dropdown-item d-flex align-items-center"
+              data-bs-theme-value="dark"
+              aria-pressed="true">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#dark-color-mode"></use></svg>
+        ダーク
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="dropdown-item d-flex align-items-center active"
+              data-bs-theme-value="auto"
+              aria-pressed="false">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#auto-color-mode"></use></svg>
+        オート
+      </button>
+    </li>
+  </ul>
+</div>
+    
+    <p id="Back2Top"><a href="#"><i class="fa-solid fa-circle-chevron-up"></i></a></p>
+
+    
+    
+        
+        <div class="m-0 p-0 pb-1 position-fixed bottom-0 start-0 w-100">
+    <div class="m-0 p-0 text-center">
+        <p style="font-size: 11px; line-height: 11px; color: var(--bs-code-color);" class="m-0 p-0">
+            w: <span id="PrintScreenWidth">-</span><span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+            h: <span id="PrintScreenHeight">-</span><span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+            srl: <span id="PrintScrollTop">-</span><span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+            cls: <span id="PrintBreakpointClass">-</span>
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // breakpoints
+    // https://getbootstrap.jp/docs/5.3/layout/breakpoints/
+    function SetScreenSize() {
+        let ScreenWidth  = $(window).width(),
+            ScreenHeight = $(window).height(),
+            winScrollTop = $(window).scrollTop(),
+            BreakpointClass = 'None';
+        ScrollTop = Math.round(winScrollTop);
+        if ( ScreenWidth >= 1400 ) {
+            BreakpointClass = 'xxl'
+        } else if ( ScreenWidth >= 1200  ) {
+            BreakpointClass = 'xl'
+        } else if ( ScreenWidth >= 992  ) {
+            BreakpointClass = 'lg'
+        } else if ( ScreenWidth >= 768  ) {
+            BreakpointClass = 'md'
+        } else if ( ScreenWidth >= 576  ) {
+            BreakpointClass = 'sm'
+        } else {
+            BreakpointClass = 'xs'
+        };
+        $("#PrintScreenWidth").text(ScreenWidth);
+        $("#PrintScreenHeight").text(ScreenHeight);
+        $("#PrintScrollTop").text(ScrollTop);
+        $("#PrintBreakpointClass").text(BreakpointClass);
+    };
+    function GetScreenSize() {
+        let ScreenWidth  = $(window).width(),
+            ScreenHeight = $(window).height(),
+            BreakpointClass = 'None';
+        if ( ScreenWidth >= 1400 ) {
+            BreakpointClass = 'xxl'
+        } else if ( ScreenWidth >= 1200  ) {
+            BreakpointClass = 'xl'
+        } else if ( ScreenWidth >= 992  ) {
+            BreakpointClass = 'lg'
+        } else if ( ScreenWidth >= 768  ) {
+            BreakpointClass = 'md'
+        } else if ( ScreenWidth >= 576  ) {
+            BreakpointClass = 'sm'
+        } else {
+            BreakpointClass = 'xs'
+        };
+        $("#PrintScreenWidth").text(ScreenWidth);
+        $("#PrintScreenHeight").text(ScreenHeight);
+        $("#PrintBreakpointClass").text(BreakpointClass);
+    };
+    function GetScrollPoint() {
+        let winScrollTop = $(window).scrollTop();
+        ScrollTop = Math.round(winScrollTop);
+        $("#PrintScrollTop").text(ScrollTop);
+    };
+    
+    // document ready
+    $(function() {
+        SetScreenSize();
+    });
+    // window resize
+    $(window).resize(function(){
+        GetScreenSize();
+    });
+    // document scroll
+    $(document).on('scroll', function() {
+        GetScrollPoint();
+    });
+</script>
+    
+    
+    <footer class="border-top bottom-0 px-5">
+    <div class="row">
+        <div class="col-4 col-md-3 my-4">
+            <h5 class="fs-5 fw-5">Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-body-secondary"
+                       href="../../index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-body-secondary"
+                       href="../../inquiry/index.html" >
+                        Inquiry
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-4 col-md-3 my-4">
+            <h5 class="fs-5 fw-5">Sample</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-body-secondary"
+                       href="../page/index.html">
+                        Page
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-body-secondary"
+                       href="../form/index.html">
+                        Form
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-body-secondary"
+                       href="../summernote/create/index.html">
+                        Summernote Form
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-body-secondary"
+                       href="./index.html">
+                        Items View
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-body-secondary"
+                       href="../graph/index.html">
+                        Graph View
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="d-flex flex-column flex-sm-row justify-content-between border-top py-4">
+        <p>&copy; 2023 Django myapp.</p>
+        <ui class="d-flex">
+            <li class="mx-1">
+                <!-- Github -->
+                <a class="btn btn-outline-highlight rounded-circle"
+                   role="button"
+                   href="https://github.com/MITSUHIRO-KURIKI"
+                   target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                </a>
+            </i>
+            <li class="mx-1">
+                <!-- Linkedin -->
+                <a class="btn btn-outline-highlight rounded-circle"
+                   role="button"
+                   href="https://www.linkedin.com/in/mitsuhiro-k/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </i>
+        </div>
+      </div>
+</footer>
+</body>
+</html>
