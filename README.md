@@ -8,3 +8,5 @@ Djangoの基本的なログイン・ログアウトなどの認証、セキュ�
 内容は以下のデモサイトをご覧ください(ajax、form投稿など動的な機能はローカル環境等での実行が必要です)  
 [https://mitsuhiro-kuriki.github.io/DjangoTemplate/](https://mitsuhiro-kuriki.github.io/DjangoTemplate/ "デモページ")
 
+## Other
+本アプリケーションで使われる各種ライブラリのライセンスは本ライセンスには含まれません。各種ライブラリのライセンスに従って利用してください。
