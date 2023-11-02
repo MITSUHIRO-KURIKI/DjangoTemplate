@@ -5,6 +5,6 @@ Djangoの基本的なログイン・ログアウトなどの認証、セキュ�
 メールアドレスに関する情報の暗号化や特定IPアドレスからのアクセス遮断などセキュリティ対策も備えています
 
 ## DEMO
-内容は以下のデモサイトをご覧ください
+内容は以下のデモサイトをご覧ください  
 [https://mitsuhiro-kuriki.github.io/DjangoTemplate/](https://mitsuhiro-kuriki.github.io/DjangoTemplate/ "デモページ")
 
