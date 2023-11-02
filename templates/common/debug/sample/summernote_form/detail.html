@@ -1,0 +1,47 @@
+{% extends 'pages/general/general_base.html' %}
+{% load static %}
+
+{# --- CSS --- #}
+{% block general_css_previous %}
+{# --- summernote --- #}
+<link rel="stylesheet" href="{% static 'templates/common/lib/summernote/summernote.css' %}" />
+{% endblock %}
+
+{# --- SCRIPT previous --- #}
+{% block general_js_previous %}
+{# --- Custom script for tooltip --- #}
+<script src="{% static 'templates/common/func/tooltip/tooltip.js' %}"></script>
+{% endblock %}
+
+{# --- CONTENT --- #}
+{% block general_content %}
+<div class="row d-flex justify-content-center my-4">
+    <div class="col-xl-10 col-lg-10 col-sm-12">
+        <div class="row pb-3">
+            <h1 class="f-content-title">sumernote 動作確認用プレビュー</h1>
+        </div>
+        <div class="row pt-2">
+            <div class="col-12">
+                <p class="text-primary font-monospace fs-7">DB TEXT</p>
+                <p class="border border-primary border-1 text-success font-monospace fs-7 text-break py-1">{{ obj.post_text }}</p>
+            </div>
+        </div>
+        <div class="row pt-2">
+            <div class="col-12">
+                <p class="text-primary font-monospace fs-7">DECODED TEXT</p>
+                <p class="border border-primary border-1 text-success font-monospace fs-7 text-break py-1">{{ decoded_text }}</p>
+            </div>
+        </div>
+        <div class="row pt-2">
+            <div class="col-12">
+                <p class="text-primary font-monospace fs-7">PREVIEW</p>
+                <div class="border border-primary border-1">{{ decoded_text | safe }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{# --- 登録したPOST一覧 --- #}
+{% with model_objs=sample_summernote_post_model %}
+    {% include 'common/debug/sample/summernote_form/posted_items/posted_items.html' %}
+{% endwith %}
+{% endblock %}
