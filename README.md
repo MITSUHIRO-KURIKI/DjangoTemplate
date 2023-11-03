@@ -49,7 +49,6 @@ DjangoTemplate/
 │  └─security
 ├─docs
 ├─media
-│  └─apps
 ├─sample
 │  ├─forms
 │  ├─models
