@@ -38,11 +38,8 @@ DjangoTemplate/
 ├─common
 │  ├─lib
 │  │  ├─axes
-│  │  │  ├─***
 │  │  ├─social_core
-│  │  │  ├─***
 │  │  └─social_django
-│  │      └─***
 │  ├─scripts
 │  └─views
 ├─config
@@ -51,14 +48,8 @@ DjangoTemplate/
 │  ├─extra_settings
 │  └─security
 ├─docs
-│  └─***
 ├─media
 │  └─apps
-│      ├─summernote
-│      │  └─attachment
-│      │      └─image
-│      └─user_profile
-│          └─user_icon
 ├─sample
 │  ├─forms
 │  ├─models
@@ -67,53 +58,17 @@ DjangoTemplate/
 │  └─views
 ├─static
 │  ├─apps
-│  │  ├─llms
-│  │  └─user_profile
-│  │      └─user_icon
-│  │          └─default
 │  ├─dataset
-│  │  └─sample
-│  │      ├─Anime
-│  │      └─Temperature
 │  └─templates
 │      ├─base
 │      ├─common
 │      │  ├─css
-│      │  │  ├─border_bottom_effect
-│      │  │  ├─bs-color
-│      │  │  ├─font-utils
-│      │  │  ├─form-utils
-│      │  │  ├─layout-utils
-│      │  │  └─scrollspy-styles
 │      │  ├─func
-│      │  │  ├─Back2Top
-│      │  │  ├─bs-color-modes
-│      │  │  ├─bs-custom-file-input
-│      │  │  ├─check-confirm
-│      │  │  ├─fade_in_content
-│      │  │  ├─fade_in_one_word_at_a_time
-│      │  │  ├─navbar
-│      │  │  ├─on-click-disable
-│      │  │  ├─radio-check-control
-│      │  │  ├─sidenav
-│      │  │  ├─text_highlight
-│      │  │  └─tooltip
 │      │  └─lib
-│      │      ├─cytoscape-extensions
-│      │      │  ├─cytoscape-navigator
-│      │      │  ├─cytoscape-panzoom
-│      │      │  └─layout-base
-│      │      ├─select2
-│      │      ├─summernote
-│      │      ├─summernote-fontawesome
-│      │      └─tempus-dominus
 │      ├─meta_image
 │      └─pages
 │          ├─home
-│          │  ├─css
-│          │  └─img
 │          └─sample
-│              └─css
 ├─templates
 │  ├─accounts
 │  │  ├─AccountDelete
@@ -132,18 +87,9 @@ DjangoTemplate/
 │  │  │      └─notice_admin_mail_template
 │  │  └─user_properties
 │  │      ├─asset
-│  │      │  └─sidenav
 │  │      └─Settings
 │  ├─common
 │  │  ├─asset
-│  │  │  ├─ajax_pagenation
-│  │  │  ├─bs-color-modes
-│  │  │  ├─cytoscape
-│  │  │  ├─grecaptcha
-│  │  │  ├─page_move
-│  │  │  ├─summernote
-│  │  │  ├─tempus-dominus
-│  │  │  └─textarea_resize
 │  │  └─debug
 │  │      └─sample
 │  │          ├─form
@@ -156,9 +102,5 @@ DjangoTemplate/
 │  └─pages
 │      ├─general
 │      └─home
-│          └─page
-│              └─not_authenticated
 └─templatetags
-    ├─common
-    └─context_processors
 ```
