@@ -151,3 +151,22 @@
 .graph-tertiary-bg {
     background-color: var(--graph-tertiary-bg);
 }
+/* min-** */
+.min-vw-25 {
+    min-width: 25vw!important
+}
+.min-vw-50 {
+    min-width: 50vw!important
+}
+.min-vw-75 {
+    min-width: 75vw!important
+}
+.min-vh-25 {
+    min-height: 25vh!important
+}
+.min-vh-50 {
+    min-height: 50vh!important
+}
+.min-vh-75 {
+    min-height: 75vh!important
+}
