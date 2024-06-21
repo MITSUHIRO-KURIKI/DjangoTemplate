@@ -3,7 +3,7 @@ from .sample_form_views import (
 )
 from .sample_summernote_post_views import (
     SampleSummernotePostCreateView, SampleSummernotePostDetailView,
-    SampleSummernotePostUpdateView, SampleSummernotePostDeleteView,
+    SampleSummernotePostUpdateView,
 )
 from .sample_items_views import (
     import_anime_dataset2model, SampleItemsListView, SampleItemsDetailView,

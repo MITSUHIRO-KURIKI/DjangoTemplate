@@ -4,7 +4,7 @@ from ..forms import SampleForm
 
 class SampleFormView(FormView):
 
-    template_name = 'common/debug/sample/form/form.html'
+    template_name = 'sample/form/form.html'
     form_class    = SampleForm
 
     def posted_render(self, context, request):

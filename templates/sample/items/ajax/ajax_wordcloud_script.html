@@ -1,0 +1,45 @@
+{% comment %} 
+template引数:
+ * AjaxEndPoint
+ * ceo_api_data_pk
+ * IdWordCloudArea
+{% endcomment %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        var isAjaxProcessing = false;
+        // Ajax 処理中の場合にはさらなる要求は受け付けない
+        if( isAjaxProcessing ) {
+            console.log('Ajax: Request rejected because it is being processed');
+            return;
+        };
+        isAjaxProcessing = true;
+        // Ajax
+        var csrf_token = getCookie('csrftoken');
+        $.ajax({
+            url:      '{{ AjaxEndPoint }}',
+            type:     'POST',
+            dataType: 'json',
+            data: {
+                'data_pk': {{ data_pk }},
+            },
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader('X-CSRFToken', csrf_token);
+                }
+            },
+        // Ajax 通信成功処理
+        }).done( function (data) {
+            let img_src_str = data.img_src_str;
+            $('#{{ IdWordCloudArea }}').empty();
+            $('#{{ IdWordCloudArea }}').append(
+                '<img src=' + img_src_str + ' class="rounded border mw-100 mh-100">'
+            );
+        // Ajax 通信エラー処理
+        }).fail( function () {
+            $('#{{ IdWordCloudArea }}').html('<option>error</option>');
+        // Ajax 通信終了時処理(エラーでも実行)
+        }).always(function() {
+            isAjaxProcessing = false;
+        });
+    });
+</script>

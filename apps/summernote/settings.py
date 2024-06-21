@@ -18,7 +18,7 @@ ATTRIBUTES = {
 ALLOWED_STYLES = [
     'background-color', 'font-size', 'line-height', 'color', 'text-align', 'font-family', 'width', 'height', 'margin-left',
 ]
-#  許可するリンクのプロトコル
+# 許可するリンクのプロトコル
 ALLOWED_PROTOCOLS = frozenset(('http', 'https', 'data'))
 # 許可していない要素を除去する
 IS_STRIP = True

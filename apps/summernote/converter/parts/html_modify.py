@@ -92,11 +92,11 @@ def html_modify_fnc(html_text:str) -> str:
 #     r = re.findall(p,text)
 #     if len(r) > 0:
 #         for mention in r:
-#             unique_account_id = mention[1:-1]
+#             unique_user_id = mention[1:-1]
 #             try:
-#                 user              = get_object_or_404(User, unique_account_id=unique_account_id)
-#                 unique_account_id = user.unique_account_id
-#                 text              = text.replace(mention, f'<a href="{account_page_url}{unique_account_id}">@{unique_account_id}</a> ')
+#                 user           = get_object_or_404(User, unique_user_id=unique_user_id)
+#                 unique_user_id = user.unique_user_id
+#                 text           = text.replace(mention, f'<a href="{account_page_url}{unique_user_id}">@{unique_user_id}</a> ')
 #             except:
 #                 pass
 #     convert_text = text

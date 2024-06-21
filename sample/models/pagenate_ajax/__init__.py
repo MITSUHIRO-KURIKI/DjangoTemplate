@@ -1,1 +1,1 @@
-from .get_sample_items_ajax_data import get_sample_items_ajax_data
+from .SampleItems_models_pagenate import sample_items_models_pagenate_ajax

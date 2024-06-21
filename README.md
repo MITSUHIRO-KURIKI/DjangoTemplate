@@ -28,7 +28,6 @@ DjangoTemplate/
 │  │  ├─models
 │  │  │  └─receivers
 │  │  └─views
-│  ├─llms_chat
 │  ├─summernote
 │  │  └─converter
 │  │      └─parts
@@ -36,11 +35,17 @@ DjangoTemplate/
 │      ├─models
 │      └─views
 ├─common
+│  ├─fonts
 │  ├─lib
 │  │  ├─axes
 │  │  ├─social_core
 │  │  └─social_django
 │  ├─scripts
+│  │  ├─DjangoUtils
+│  │  ├─LlmUtils
+│  │  ├─NLPUtils
+│  │  ├─PlotlyUtils
+│  │  └─PythonCodeUtils
 │  └─views
 ├─config
 │  ├─acsess_logic
@@ -49,6 +54,12 @@ DjangoTemplate/
 │  └─security
 ├─docs
 ├─media
+│  └─apps
+│      ├─summernote
+│      │  └─attachment
+│      │      └─image
+│      └─user_profile
+│          └─user_icon
 ├─sample
 │  ├─forms
 │  ├─models
@@ -59,15 +70,15 @@ DjangoTemplate/
 │  ├─apps
 │  ├─dataset
 │  └─templates
+│      ├─apps
 │      ├─base
 │      ├─common
 │      │  ├─css
 │      │  ├─func
 │      │  └─lib
 │      ├─meta_image
-│      └─pages
-│          ├─home
-│          └─sample
+│      ├─pages
+│      └─sample
 ├─templates
 │  ├─accounts
 │  │  ├─AccountDelete
@@ -78,28 +89,31 @@ DjangoTemplate/
 │  │  ├─PasswordChange
 │  │  ├─PasswordReset
 │  │  │  └─mail_template
-│  │  └─SignUp
-│  │      └─mail_template
+│  │  ├─SignUp
+│  │  │  └─mail_template
+│  │  ├─TokenDelete
+│  │  └─UserIdSet
 │  ├─apps
 │  │  ├─inquiry
 │  │  │  └─inquiry_form
 │  │  │      └─notice_admin_mail_template
 │  │  └─user_properties
 │  │      ├─asset
+│  │      │  └─sidenav
 │  │      └─Settings
 │  ├─common
 │  │  ├─asset
 │  │  └─debug
-│  │      └─sample
-│  │          ├─form
-│  │          ├─graph
-│  │          ├─items
-│  │          │  └─ajax
-│  │          ├─page
-│  │          └─summernote_form
-│  │              └─posted_items
-│  └─pages
-│      ├─general
-│      └─home
+│  ├─pages
+│  │  ├─general
+│  │  └─home
+│  └─sample
+│      ├─form
+│      ├─graph
+│      ├─items
+│      │  └─ajax
+│      ├─page
+│      └─summernote_form
+│          └─posted_items
 └─templatetags
 ```

@@ -1,6 +1,6 @@
 from django.db.models import Q
+from common.scripts.DjangoUtils import parse_search_params
 from functools import reduce
-from common.scripts import parse_search_params
 
 def query_search(objs, query:str):
     search_words_list = parse_search_params(query)

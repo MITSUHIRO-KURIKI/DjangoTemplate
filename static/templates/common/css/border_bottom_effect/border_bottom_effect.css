@@ -7,8 +7,6 @@
 }
 
 .input-border-none {
-	padding: 0;
-	margine: 0;
 	border:     none;
     box-shadow: none !important;
 }
@@ -17,7 +15,7 @@
 	content:  "";
 	width:    0;
 	height:   2px;
-	z-index:  1030;
+	z-index:  99;
 	-webkit-transition: all var(--border-bottom-animation-transition) ease;
 	-moz-transition:    all var(--border-bottom-animation-transition) ease;
 	-ms-transition:     all var(--border-bottom-animation-transition) ease;

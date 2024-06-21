@@ -1,0 +1,61 @@
+{% extends 'pages/general/general_base.html' %}
+{% load static %}
+
+{# --- CSS --- #}
+{% block general_css_previous %}
+{# --- Custom style for form-utils --- #}
+<link rel="stylesheet" href="{% static 'templates/common/css/form-utils/form-utils.css' %}" />
+{% endblock %}
+
+{# --- SCRIPT previous --- #}
+{% block general_js_previous %}
+{# --- Custom script for getCookie --- #}
+<script src="{% static 'templates/common/func/getCookie/getCookie.js' %}"></script>
+{# --- Custom script for escape_html --- #}
+<script src="{% static 'templates/common/func/escape_html/escape_html.js' %}"></script>
+{# --- Custom script for on-click-disable --- #}
+<script src="{% static 'templates/common/func/on-click-disable/button.js' %}"></script>
+{% endblock %}
+
+{# --- CONTENT --- #}
+{% block general_content %}
+<div class="row mx-auto">
+    <div class="col-lg-10 col-md-12 mx-auto">
+        <div class="d-flex flex-nowrap justify-content-between pb-3">
+            <div class="text-left flex-grow-1">
+                <h1 class="f-content-title">pagenation and QuerySetSearch 動作確認用ページ</h1>
+            </div>
+            <div class="text-right mt-4">
+                <button class="btn btn-primary on-click-disable"
+                        onclick="location.href='{% url 'sample:import_anime_dataset' %}'">
+                    DataImport
+                </button>
+            </div>
+        </div>
+        {# --- Item List --- #}
+        {% with search_form_action_url=search_form_action_url url_param=url_param %}
+            {% include 'common/asset/ajax_pagenation/url_param.html'%}
+        {% endwith %}
+        <div class="card">
+            <div class="list-group">
+                <div id="ItemList">
+                    {% for obj in pagenate.objs %}
+                    <a href="{% url 'sample:item_detail' pk=obj.pk %}"
+                       class="list-group-item list-group-item-action border p-2">
+                        {{ obj.Japanese }}(pk:{{ obj.pk }})
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {# --- ajax_pagenation --- #}
+        {% with AjaxEndPoint=AjaxEndPoint ListAreaId='ItemList' PagenationNavId='PagenationNavItems' %}
+            {% include 'sample/items/ajax/ajax_pagenation_script.html'%}
+        {% endwith %}
+        {# --- Pagenation Nav --- #}
+        {% with AjaxFuncName='ajax_pagenate_fnc' pagenate=pagenate url_param=url_param %}
+            {% include 'common/asset/ajax_pagenation/ajax_pagenation_nav.html'%}
+        {% endwith %}
+    </div>
+</div>
+{% endblock %}

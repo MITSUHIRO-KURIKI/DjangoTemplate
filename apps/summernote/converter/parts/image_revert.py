@@ -1,9 +1,9 @@
-from ...models import SummernoteAttachment
 import base64
 from bs4 import BeautifulSoup
 import copy
-from common.scripts import print_color
+from common.scripts.PythonCodeUtils import print_color
 from typing import Dict
+from ...models import SummernoteAttachment
 
 # Summernote 表示画面用
 # attachment_id -> image file

@@ -1,0 +1,47 @@
+{% comment %} 
+template引数:
+ * AjaxEndPoint
+ * LlmGenerateArea
+{% endcomment %}
+<script type="text/javascript">
+    var isAjaxProcessing = false;
+    function ajax_summary_fnc() {
+        $('#{{ LlmGenerateArea }}').empty();
+        $('#{{ LlmGenerateArea }}').append('<div class="p-3"><span class="spinner-grow spinner-grow-sm text-info me-1" role="status" aria-hidden="true"></span><small class="text-info">Generating...</small></div>');
+        // Ajax 処理中の場合にはさらなる要求は受け付けない
+        if( isAjaxProcessing ) {
+            console.log('Ajax: Request rejected because it is being processed');
+            return;
+        };
+        isAjaxProcessing = true;
+        // Ajax
+        var csrf_token = getCookie('csrftoken');
+        $.ajax({
+            url:      '{{ AjaxEndPoint }}',
+            type:     'POST',
+            dataType: 'json',
+            data: {
+                'title':    "{{ obj.Japanese | linebreaksbr }}",
+                'Synopsis': "{{ obj.Synopsis | linebreaksbr }}",
+            },
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader('X-CSRFToken', csrf_token);
+                }
+            },
+        // Ajax 通信成功処理
+        }).done( function (data) {
+                let response = data.response;
+                // LlmGenerateArea
+                $('#{{ LlmGenerateArea }}').empty();
+                $('#{{ LlmGenerateArea }}').append('<span>' + escape_html(response) + '</span>');
+        // Ajax 通信エラー処理
+        }).fail( function () {
+            $('#{{ LlmGenerateArea }}').empty();
+            $('#{{ LlmGenerateArea }}').append('<span>error...</span>');
+        // Ajax 通信終了時処理(エラーでも実行)
+        }).always(function() {
+            isAjaxProcessing = false;
+        });
+    }
+</script>

@@ -1,0 +1,40 @@
+{% extends 'pages/general/general_base.html' %}
+{% load static %}
+
+{# --- SCRIPT previous --- #}
+{% block general_js_previous %}
+{# --- plotly --- #}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly.min.js" integrity="sha512-V0j9LhrK9IMNdFYZqh+IqU4cjo7wdxyHNyH+L0td4HryBuZ7Oq6QxP2/CWr6TituX31+gv5PnolvERuTbz8UNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{# --- Custom script for on-click-disable --- #}
+<script src="{% static 'templates/common/func/on-click-disable/button.js' %}"></script>
+{% endblock %}
+
+{# --- CONTENT --- #}
+{% block general_content %}
+<div class="row mx-auto">
+    <div class="col-lg-10 col-md-12 mx-auto">
+        <div class="d-flex flex-nowrap justify-content-between pb-3">
+            <div class="text-left flex-grow-1">
+                <h1 class="f-content-title">plotly 動作確認用ページ</h1>
+            </div>
+            <div class="text-right mt-4">
+                <button class="btn btn-primary on-click-disable"
+                        onclick="location.href='{% url 'sample:import_temperature_dataset' %}'">
+                    DataImport
+                </button>
+            </div>
+        </div>
+        <div class="outer-rounded-3 graph-base-bg border border-1">
+            {{ plot_fig | safe }}
+        </div>
+        <small>
+            <a class="alert-link"
+               href="https://plotly.com/python/"
+               target="_blank"
+               rel="noopener noreferrer">
+               その他の作成できるグラフ例: https://plotly.com/python/
+            </a>
+        </small>
+    </div>
+</div>
+{% endblock %}

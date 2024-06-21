@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import url(../../../base/color.css);
+@import url(../../../common/css/bs-color/bs-color.css);
+
+.btn-chatgpt,
+.btn-outline-chatgpt:hover {
+    color:            var(--chatgpt-theme-color1) !important;
+    border:           2px solid var(--chatgpt-theme-color1);
+    background-color: var(--chatgpt-theme-color2);
+}
+.btn-chatgpt:hover,
+.btn-outline-chatgpt {
+    color:            var(--chatgpt-theme-color2) !important;
+    border:           2px solid var(--chatgpt-theme-color1);
+    background-color: var(--chatgpt-theme-color1);
+}
