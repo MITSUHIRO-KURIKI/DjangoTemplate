@@ -8,6 +8,7 @@ $(function () {
             closeOnSelect:     !$(this).attr('multiple'),
             selectionCssClass: 'select2--small',
             dropdownCssClass:  'select2--small',
+            dropdownParent:    $(this).parent(),
         });
     });
 });
