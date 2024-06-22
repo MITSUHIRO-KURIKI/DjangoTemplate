@@ -101,7 +101,7 @@ class UserReceptionSettingResource(ModelResource):
         export_order = fields
         clean_model_instances = True
 
-class UserReceptionSettingAdmin(admin.ModelAdmin):
+class UserReceptionSettingAdmin(ExportMixin, admin.ModelAdmin):
 
     resource_class = UserReceptionSettingResource
 
