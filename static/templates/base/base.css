@@ -89,6 +89,12 @@ a:hover {
     text-decoration: none;
     color:           inherit;
 }
+a.hover-underline:hover {
+    text-decoration:           underline;
+    color:                     inherit;
+    text-decoration-thickness: 1px;
+}
+
 /* anker-botton */
 a.btn-primary,
 a.btn-secondary,
