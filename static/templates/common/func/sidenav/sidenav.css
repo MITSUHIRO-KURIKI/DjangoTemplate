@@ -9,6 +9,7 @@
 /* 枠 */
 /* left side */
 #SideNav {
+    position:     absolute;
     padding-left: var(--sidenav-padding-left);
     width:        calc( var(--sidenav-item-width) + var(--sidenav-padding-left) );
     background:   var(--bs-body-bg);
