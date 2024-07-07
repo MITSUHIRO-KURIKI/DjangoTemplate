@@ -1,4 +1,4 @@
-var sidenav_item_width = 12;
+var sidenav_item_width = getComputedStyle(document.documentElement).getPropertyValue('--sidenav-item-width').replace('rem', '');
 
 // rem → px 変換
 function ConvertRem2Px(rem) {
