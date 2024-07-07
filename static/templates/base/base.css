@@ -125,7 +125,7 @@ a.alert-link {
     text-decoration: underline dotted;
 }
 /* botton */
-.btn,
+.btn.navbar-toggler,
 .btn:focus {
     border:     none;
     box-shadow: none;
