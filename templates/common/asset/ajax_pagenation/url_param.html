@@ -45,7 +45,7 @@ template引数:
                 data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false">
-            <i class="beginning-sentence-icon fa-solid fa-list-ol"></i>表示件数: {{ url_param.per_n }}
+            <i class="beginning-sentence-icon fa-solid fa-list-ol"></i>表示件数: {% if url_param.per_n > 100 %}100{% elif url_param.per_n < 1 %}1{% else %}{{ url_param.per_n }}{% endif %}
         </button>
         <ul class="dropdown-menu dropdown-menu-right">
             <li><a href="?p=true&per_n=10{% if url_param.sort %}&sort={{ url_param.sort }}{% endif %}{% if url_param.q %}&q={{ url_param.q }}{% endif %}" role="button" class="dropdown-item">10</a></li>
