@@ -1,7 +1,7 @@
 {# --- INLINE MESSAGE --- #}
 {% if messages %}
     {% for message in messages %}
-        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} alert-fadeout alert-dismissible fade show text-center font-weight-bold fixed-top"
+        <div class="alert {% if message.tags %}{% if message.tags == 'error' %}alert-danger{% else %}alert-{{ message.tags }}{% endif %}{% endif %} alert-fadeout alert-dismissible fade show text-center font-weight-bold fixed-top"
              role="alert"
              id="TopMessage">
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
