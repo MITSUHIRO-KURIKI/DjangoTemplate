@@ -94,3 +94,8 @@
 .navber-color-reset a:hover {
     color:            var(--bs-emphasis-color) !important;
 }
+
+/* TopMessage */
+#TopMessage {
+    height: var(--navber-height);
+}
