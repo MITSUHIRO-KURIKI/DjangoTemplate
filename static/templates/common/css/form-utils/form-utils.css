@@ -40,6 +40,13 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+/* button-groupe */
+.btn-group .btn-check:not(:checked) + .btn-check-color-inherit,
+.btn-group-vertical .btn-check:not(:checked) + .btn-check-color-inherit {
+    color: inherit;  /* 内部のテキストも通常のテキスト色を継承 */
+}
+
 /* search */
 .search-input-form {
     display:            flex;
