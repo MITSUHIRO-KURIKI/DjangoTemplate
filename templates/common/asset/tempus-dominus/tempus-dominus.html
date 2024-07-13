@@ -5,7 +5,7 @@ template引数:
 {% endcomment %}
 <script type="text/javascript">
 {% if DatetimepickerType == 'Date' %}
-new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
+let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
     localization: {
         format: 'yyyy-MM-dd',
         locale: 'ja',
@@ -37,6 +37,7 @@ new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
         startOfTheWeek:  1,
         today:           '現在',
         toggleMeridiem:  'Toggle Meridiem',
+        hourCycle:       'h23',
     },
     display: {
         icons: {
@@ -62,7 +63,6 @@ new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
         inline:           false,
         keepOpen:         false,
         components: {
-            useTwentyfourHour: false,
             calendar: true,
             date:     true,
             month:    true,
@@ -91,8 +91,8 @@ new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
         disabledHours:         [],
         enabledHours:          [],},
     });
-{% elif DatetimepickerType == 'Time' %}
-new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
+{% elif DatetimepickerType == 'Time-HHmm' %}
+let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
     localization: {
         format: 'HH:mm',
         locale: 'ja',
@@ -124,6 +124,7 @@ new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
         startOfTheWeek:  1,
         today:           '現在',
         toggleMeridiem:  'Toggle Meridiem',
+        hourCycle:       'h23',
     },
     display: {
         icons: {
@@ -149,7 +150,6 @@ new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
         inline:           false,
         keepOpen:         false,
         components: {
-            useTwentyfourHour: false,
             calendar: false,
             date:     false,
             month:    false,
@@ -178,8 +178,95 @@ new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
         disabledHours:         [],
         enabledHours:          [],},
     });
+{% elif DatetimepickerType == 'Time-HHmmss' %}
+let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
+    localization: {
+        format: 'HH:mm:ss',
+        locale: 'ja',
+        dayViewHeaderFormat:'yyyy年 MMMM',
+        clear:           'クリア',
+        close:           '閉じる',
+        decrementHour:   '時間を減らす',
+        decrementMinute: '分を減らす',
+        decrementSecond: '秒を減らす',
+        incrementHour:   '時間を増やす',
+        incrementMinute: '分を増やす',
+        incrementSecond: '秒を増やす',
+        nextCentury:     '次へ',
+        nextDecade:      '次へ',
+        nextMonth:       '翌月',
+        nextYear:        '翌年',
+        pickHour:        '時間の選択',
+        pickMinute:      '分の選択',
+        pickSecond:      '秒の選択',
+        previousCentury: '前へ',
+        previousDecade:  '前へ',
+        previousMonth:   '前月',
+        previousYear:    '前年',
+        selectDate:      '日付の選択',
+        selectDecade:    '期間の選択',
+        selectMonth:     '月の選択',
+        selectTime:      '時刻の選択',
+        selectYear:      '年の選択',
+        startOfTheWeek:  1,
+        today:           '現在',
+        toggleMeridiem:  'Toggle Meridiem',
+        hourCycle:       'h23',
+    },
+    display: {
+        icons: {
+            type:     'icons',
+            time:     'fa-solid fa-clock',
+            date:     'fa-solid fa-calendar',
+            up:       'fa-solid fa-arrow-up',
+            down:     'fa-solid fa-arrow-down',
+            previous: 'fa-solid fa-chevron-left',
+            next:     'fa-solid fa-chevron-right',
+            today:    'fa-solid fa-calendar-check',
+            clear:    'fa-solid fa-trash',
+            close:    'fa-solid fa-xmark',},
+        buttons: {
+            today: false,
+            clear: true,
+            close: true,},
+        sideBySide:       false,
+        viewMode:         'clock',
+        toolbarPlacement: 'bottom',
+        theme:            'auto',
+        calendarWeeks:    false,
+        inline:           false,
+        keepOpen:         false,
+        components: {
+            calendar: false,
+            date:     false,
+            month:    false,
+            year:     false,
+            decades:  false,
+            clock:    true,
+            hours:    true,
+            minutes:  true,
+            seconds:  true,},
+    },
+    promptTimeOnDateChange: true,               //時間が有効になっている場合、日付を選択すると自動的に時計を表示
+    promptTimeOnDateChangeTransitionDelay: 200, // promptTimeOnDateChange の Delay
+    defaultDate:            undefined,          //デフォルトの日付
+    useCurrent:             false,              //ピッカーを開いたときに現在の日付/時刻をデフォルト値として使用する
+    stepping:               1,
+    dateRange:              false,              //範囲指定
+    multipleDates:          false,              //複数の日付を許可
+    multipleDatesSeparator: '; ',               //複数の日付区切り文字
+    restrictions: {
+        minDate:               undefined,
+        maxDate:               undefined,
+        disabledDates:         [],
+        enabledDates:          [],
+        daysOfWeekDisabled:    [],
+        disabledTimeIntervals: [],
+        disabledHours:         [],
+        enabledHours:          [],},
+    });
 {% else %}
-    new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
+let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
     localization: {
         format: 'yyyy-MM-dd HH:mm',
         locale: 'ja',
@@ -211,6 +298,7 @@ new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
         startOfTheWeek:  1,
         today:           '現在',
         toggleMeridiem:  'Toggle Meridiem',
+        hourCycle:       'h23',
     },
     display: {
         icons: {
@@ -236,7 +324,6 @@ new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
         inline:           false,
         keepOpen:         false,
         components: {
-            useTwentyfourHour: false,
             calendar: true,
             date:     true,
             month:    true,
