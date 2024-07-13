@@ -46,9 +46,8 @@
 }
 
 /* Border bottom center */
-.input-border-none ~ .border-bottom-animation.center {
-	left:   0;
-	right:  0;
+.input-border-none ~ .border-bottom-animation.a-center {
+	left: 50%;
+	transform: translateX(-50%);
 	bottom: 0;
-	margin: 0 auto;
 }
