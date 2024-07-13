@@ -5,7 +5,7 @@ template引数:
 {% endcomment %}
 <script type="text/javascript">
 {% if DatetimepickerType == 'Date' %}
-let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
+let tempusDominusPicker_{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
     localization: {
         format: 'yyyy-MM-dd',
         locale: 'ja',
@@ -92,7 +92,7 @@ let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(docu
         enabledHours:          [],},
     });
 {% elif DatetimepickerType == 'Time-HHmm' %}
-let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
+let tempusDominusPicker_{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
     localization: {
         format: 'HH:mm',
         locale: 'ja',
@@ -179,7 +179,7 @@ let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(docu
         enabledHours:          [],},
     });
 {% elif DatetimepickerType == 'Time-HHmmss' %}
-let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
+let tempusDominusPicker_{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
     localization: {
         format: 'HH:mm:ss',
         locale: 'ja',
@@ -266,7 +266,7 @@ let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(docu
         enabledHours:          [],},
     });
 {% else %}
-let tempusDominusPicker{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
+let tempusDominusPicker_{{ DataPickerId }} = new tempusDominus.TempusDominus(document.getElementById('{{ DataPickerId }}'),{
     localization: {
         format: 'yyyy-MM-dd HH:mm',
         locale: 'ja',
