@@ -1,21 +1,23 @@
 {# --- INLINE MESSAGE --- #}
 {% if messages %}
     {% for message in messages %}
-        <div class="alert {% if message.tags %}{% if message.tags == 'error' %}alert-danger{% else %}alert-{{ message.tags }}{% endif %}{% endif %} alert-fadeout alert-dismissible fade show text-center font-weight-bold fixed-top"
+        <div class="alert {% if message.tags %}{% if message.tags == 'error' %}alert-danger{% else %}alert-{{ message.tags }}{% endif %}{% endif %} alert-fadeout alert-dismissible d-flex justify-content-center align-self-center fade show font-weight-bold fixed-top"
              role="alert"
              id="TopMessage">
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            {{ message | linebreaksbr }}
+            <p class="d-flex align-self-center text-center">{{ message | linebreaksbr }}</p>
         </div>
         {# --- fadeOut --- #}
         <script type="text/javascript">
             {% if message.tags == 'info' %}
                 var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}3000{% endif %}
             {% else %}
-                var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}3000{% endif %}
+                var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}5500{% endif %}
             {% endif %}
             $(function () {
-                $('.alert-fadeout').delay(delay_time).fadeOut('slow');
+                $('.alert-fadeout').delay(delay_time).fadeOut('slow', function() {
+                    $(this).removeClass('d-flex');
+                });
             });
         </script>
     {% endfor %}
@@ -23,50 +25,58 @@
 {# --- FORM MESSAGE  --- #}
 {% if inlines %}
     {% if form.errors %}
-        <div class="alert alert-danger alert-fadeout alert-dismissible fade show text-center fixed-top"
+        <div class="alert alert-danger alert-fadeout alert-dismissible d-flex justify-content-center align-self-center fade show fixed-top"
              role="alert"
              id="TopMessage">
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
             </button>
-            入力にエラーがあります。フォームのエラー内容をご確認ください。
+            <p class="d-flex align-self-center text-center">入力にエラーがあります<br />フォームのエラー内容をご確認ください</p>
         </div>
         {# --- fadeOut --- #}
         <script type="text/javascript">
-            var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}3000{% endif %}
+            var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}5500{% endif %}
             $(function () {
-                $('.alert-fadeout').delay(delay_time).fadeOut('slow');
+                $('.alert-fadeout').delay(delay_time).fadeOut('slow', function() {
+                    $(this).removeClass('d-flex');
+                });
             });
         </script>
     {% else %}
         {% for formset in inlines %}
             {% if formset.errors %}
-                <div class="alert alert-danger alert-fadeout alert-dismissible fade show text-center font-weight-bold fixed-top"
+                <div class="alert alert-danger alert-fadeout alert-dismissible d-flex justify-content-center align-self-center fade show font-weight-bold fixed-top"
                      role="alert"
                      id="TopMessage">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    入力にエラーがあります。フォームのエラー内容をご確認ください。
+                    <p class="d-flex align-self-center text-center">入力にエラーがあります<br />フォームのエラー内容をご確認ください</p>
                 </div>
                 {# --- fadeOut --- #}
                 <script type="text/javascript">
-                    var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}3000{% endif %}
-                    $('.alert-fadeout').delay(delay_time).fadeOut('slow');
+                    var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}5500{% endif %}
+                    $(function () {
+                        $('.alert-fadeout').delay(delay_time).fadeOut('slow', function() {
+                            $(this).removeClass('d-flex');
+                        });
+                    });
                 </script>
             {% endif %}
         {% endfor %}
     {% endif %}
 {% elif form %}
     {% if form.errors %}
-        <div class="alert alert-danger alert-fadeout alert-dismissible fade show text-center font-weight-bold fixed-top"
+        <div class="alert alert-danger alert-fadeout alert-dismissible d-flex justify-content-center align-self-center fade show font-weight-bold fixed-top"
              role="alert"
              id="TopMessage">
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            入力にエラーがあります。フォームのエラー内容をご確認ください。
+            <p class="d-flex align-self-center text-center">入力にエラーがあります<br />フォームのエラー内容をご確認ください</p>
         </div>
         {# --- fadeOut --- #}
         <script type="text/javascript">
-            var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}3000{% endif %}
+            var delay_time = {% if message_delay_time %}{{message_delay_time}}{% else %}5500{% endif %}
             $(function () {
-                $('.alert-fadeout').delay(delay_time).fadeOut('slow');
+                $('.alert-fadeout').delay(delay_time).fadeOut('slow', function() {
+                    $(this).removeClass('d-flex');
+                });
             });
         </script>
     {% endif %}
