@@ -12,6 +12,8 @@ Djangoの基本的なログイン・ログアウトなどの認証、セキュ�
 本アプリケーションで使われる各種ライブラリのライセンスは改変したものを含めて本ライセンスには含まれません。各種ライブラリの原ライセンスに従って利用してください。
 
 ## suppl.
+<details><summary>TREE</summary>
+
 ```
 DjangoTemplate/
 ├─accounts
@@ -117,3 +119,4 @@ DjangoTemplate/
 │          └─posted_items
 └─templatetags
 ```
+</details>
